@@ -1,45 +1,60 @@
-# macro-financial-analysis
-Analysis and forecasting of stock and cryptocurrency returns using macroeconomic factors (GDP, inflation, interest rates, unemployment). A data warehouse and various ML models (Regression, Random Forest, LSTM, SARIMAX) are implemented as part of a university course project at KPI
-
-# Аналіз та прогнозування дохідності інвестиційних активів під впливом макроекономічних факторів
+# Analysis and Forecasting of Investment Asset Returns under Macroeconomic Factors
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## Огляд
+## Overview
 
-Даний репозиторій містить проєкт курсової роботи з дисципліни "Аналіз даних в інформаційних системах" (КПІ ім. Ігоря Сікорського). Метою проєкту є дослідження впливу ключових макроекономічних факторів (ВВП, інфляція, реальні процентні ставки, безробіття) на дохідність акцій та криптовалют.
+This repository contains the course project for the discipline "Data Analysis in Information Systems" at Igor Sikorsky Kyiv Polytechnic Institute (KPI). The project aims to investigate the impact of key macroeconomic factors (GDP, inflation, real interest rates, unemployment) on the returns of stocks and cryptocurrencies.
 
-## Архітектура та стек технологій
+## Architecture & Technology Stack
 
-Проєкт побудовано на основі багатовимірної моделі сховища даних (зіркоподібна схема) з реалізацією повного ETL-процесу.
+The project is built upon a multidimensional data warehouse model (star schema) with a complete ETL pipeline implementation.
 
-*   **Мова програмування:** Python
-*   **База даних:** Oracle / SQL (для сховища даних)
-*   **Основні бібліотеки:** Pandas, Scikit-learn, Statsmodels, TensorFlow/Keras, SQLAlchemy
-*   **Джерела даних:** Kaggle (дані з акцій, криптовалют, ВВП, інфляції, процентних ставок, безробіття).
+*   **Programming Language:** Python
+*   **Database:** Oracle / SQL (for the data warehouse)
+*   **Key Libraries:** Pandas, Scikit-learn, Statsmodels, TensorFlow/Keras, SQLAlchemy
+*   **Data Sources:** Kaggle (stock prices, cryptocurrency prices, GDP, inflation, real interest rates, unemployment data).
 
-## Зміст проєкту
+## Project Structure
 
-1.  **Сховище даних (Data Warehouse):**
-    *   Розробка багатовимірної моделі (схема "зірка").
-    *   Розробка ETL-процесів для завантаження, очищення та трансформації даних.
+1.  **Data Warehouse:**
+    *   Design of a multidimensional model (star schema).
+    *   Development of ETL processes for loading, cleaning, and transforming data.
 
-2.  **Аналіз даних та моделювання:**
-    *   **Кореляційний аналіз:** Визначення лінійних зв'язків між макро-факторами та дохідністю.
-    *   **Регресійний аналіз:** Побудова та порівняння моделей лінійної, множинної та поліноміальної регресії.
-    *   **Класифікація:** Прогнозування напрямку ринку за допомогою KNN, Decision Tree, Random Forest, AdaBoost, SVC.
-    *   **Прогнозування часових рядів:** Побудова та порівняння моделей ARIMA, SARIMAX та LSTM.
+2.  **Data Analysis & Modeling:**
+    *   **Correlation Analysis:** Identifying linear relationships between macroeconomic factors and asset returns.
+    *   **Regression Analysis:** Building and comparing linear, multiple, and polynomial regression models.
+    *   **Classification:** Predicting market direction using KNN, Decision Tree, Random Forest, AdaBoost, and SVC.
+    *   **Time Series Forecasting:** Building and comparing ARIMA, SARIMAX, and LSTM models.
 
-## Результати
+## Key Results
 
-*   Для акцій виявлено слабкий лінійний зв'язок з макроекономічними факторами, за винятком безробіття (r = 0.48).
-*   Криптовалюти продемонстрували сильну залежність від макроекономіки США (особливо від реальних процентних ставок та інфляції).
-*   Найкращі результати прогнозування показала модель SARIMAX, яка враховує зовнішні фактори.
-*   Нейронна мережа LSTM показала перспективні результати, але потребує більшого обсягу даних.
+*   For stocks, a weak linear correlation with macroeconomic factors was found, with the exception of unemployment (r = 0.48).
+*   Cryptocurrencies demonstrated a strong dependency on U.S. macroeconomics (especially real interest rates and inflation).
+*   The SARIMAX model, which accounts for exogenous factors, delivered the best forecasting performance.
+*   The LSTM neural network showed promising results but requires a larger dataset for improved generalization.
 
-## Як запустити проєкт
+## How to Run the Project
 
-1.  Клонуйте репозиторій:
+1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/forecasting-asset-returns-macro-factors.git
+    git clone https://github.com/your-username/macro-financial-analysis.git
+    ```
+2.  Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  Run the Jupyter Notebook or Python scripts to reproduce the analysis and results.
+
+## Limitations & Future Work
+
+The main limitation of this work is the small dataset size, especially for cryptocurrencies (only 8 annual observations). To improve model accuracy and draw more robust conclusions, future work should incorporate monthly or daily granularity data and expand the set of macroeconomic factors.
+
+## License
+
+This project is distributed under the MIT License.
+
+---
+
+**Author:** Mariia Stepanova, Igor Sikorsky Kyiv Polytechnic Institute
