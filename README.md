@@ -59,4 +59,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Author:** Mariia Stepanova, Igor Sikorsky Kyiv Polytechnic Institute (2025)
+**Author:** Mariia Stepanova  
+**Program:** Software Engineering  
+**Institution:** Igor Sikorsky Kyiv Polytechnic Institute (Kyiv, Ukraine)  
+**Year:** 2026
